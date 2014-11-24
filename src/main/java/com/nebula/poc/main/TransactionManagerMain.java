@@ -30,6 +30,7 @@ public class TransactionManagerMain {
 		Address address = new Address();
 		address.setCountry("UK");
 		address.setAddress("Somewhere new 2, UK");
+
 		customer.setAddress(address);
 		return customer;
 	}
