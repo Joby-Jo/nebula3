@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="ADDRESS")
-public class Address {
+public class Address extends BaseObject {
 
     @Id
     @Column(name="id")
@@ -31,4 +31,5 @@ public class Address {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+
 }

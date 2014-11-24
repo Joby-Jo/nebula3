@@ -23,14 +23,13 @@ public class TransactionManagerMain {
 
 	private static Customer createDummyCustomer() {
 		Customer customer = new Customer();
-//		customer.setId(2);
 //		customer.setName("Main two error messages out of the possible messagesMain two error messages");
         customer.setName("JJ 123");
-		Address address = new Address();
-//		address.setId(2);
-		address.setCountry("UK");
+//      customer.setName(null);
 
-		address.setAddress("Somewhere new, UK");
+		Address address = new Address();
+		address.setCountry("UK");
+		address.setAddress("Somewhere new 2, UK");
 		customer.setAddress(address);
 		return customer;
 	}

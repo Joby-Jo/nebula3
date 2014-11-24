@@ -9,6 +9,7 @@
 	<!-- Enable Annotation based Declarative Transaction Management -->
 	<tx:annotation-driven proxy-target-class="true" transaction-manager="transactionManager" />
     <context:annotation-config />
+    <context:spring-configured/>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory" />
@@ -39,12 +40,6 @@
         <property name="password" value=""/>
     </bean>
 
-	<bean id="customerDAO" class="com.nebula.poc.dao.CustomerDAOImpl"/>
-    <bean id="addressDAO" class="com.nebula.poc.dao.AddressDAOImpl"/>
-
-	<bean id="customerManager" class="com.nebula.poc.service.CustomerManagerImpl">
-		<property name="customerDAO" ref="customerDAO"></property>
-        <property name="addressDAO" ref="addressDAO"></property>
-	</bean>
+	<bean id="customerManager" class="com.nebula.poc.service.CustomerManagerImpl"/>
 
 </beans>

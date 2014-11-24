@@ -1,15 +1,19 @@
 package com.nebula.poc.model;
 
+import com.sun.javafx.beans.annotations.NonNull;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name="CUSTOMER")
-public class Customer {
+public class Customer extends BaseObject {
 
     @Id
     @Column(name="id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+
+    @Column(nullable = false)
 	private String name;
 
     @ManyToOne
